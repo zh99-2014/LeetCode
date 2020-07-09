@@ -1,1 +1,36 @@
-1
+给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。
+
+你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。
+
+ 
+
+示例:
+
+给定 nums = [2, 7, 11, 15], target = 9
+
+因为 nums[0] + nums[1] = 2 + 7 = 9
+所以返回 [0, 1]
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/two-sum
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+
+
+
+
+1.暴力
+暴力算法时间复杂度O（n²），空间复杂度O（1）
+
+2.排序+双指针法
+这里先将数组排序好O（nlogn），再利用双指针法遍历一遍O（n）得到结果。
+为了保存下标信息另开了一个数组
+时间复杂度O（nlogn），空间复杂度O（n）
+
+3.hash法
+利用undered_map数组构造映射，遍历nums[i]时，看target-nums[i]是否存在hash表中即可
+时间复杂度O（n），空间复杂度O（n）
+
+作者：yun-yu-chen
+链接：https://leetcode-cn.com/problems/two-sum/solution/san-chong-fang-fa-bao-li-shuang-zhi-zhen-ha-xi-san/
+来源：力扣（LeetCode）
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
